@@ -10,7 +10,7 @@ jobs:
     runs-on: self-hosted
     container:
       image: node:14.17-alpine3.10
-      options: --user 1001
+      options: --user 1000
     steps:
       - uses: actions/checkout@v2
       - run: npm i
