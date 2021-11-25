@@ -20,12 +20,12 @@ jobs:
     needs: build
     runs-on: self-hosted
     container:
-      image: node:14.17-alpine3.10
+      image: docker:dind
       options: --user 1000
     steps:
       - name: check out the repo 
         uses: actions/checkout@v2
-        
+
       - name: set up Docker builder
         uses: docker/setup-buildx-action@v1
         
