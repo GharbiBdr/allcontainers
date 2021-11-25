@@ -19,9 +19,6 @@ jobs:
     name: Push Docker image to Azure Registry
     needs: build
     runs-on: self-hosted
-    container:
-      image: docker:dind
-      options: --user 1000
     steps:
       - name: check out the repo 
         uses: actions/checkout@v2
